@@ -1,0 +1,14 @@
+$white: #fff;
+
+#appHeader{
+    background-color: $white;
+    .logo{
+        display: flex;
+        justify-content: center; /* Yatay ortalama */
+        align-items: center; /* Dikey ortalama */
+        padding-bottom: 10px;
+        img{
+            box-shadow: 3px 0 5px rgba(0,0,0,0.5);
+        }
+    }
+}

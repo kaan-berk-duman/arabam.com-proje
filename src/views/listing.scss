@@ -1,0 +1,36 @@
+//renkler
+$red: #e40030;
+$yellow: #ffdb4d;
+$gray: #f7f7f7;
+$black: #1a1a1a;
+$white: #fff;
+$tabledark: #0a1e33;
+$tableLink: #fff0f5;
+$tableBorder: #ebebeb;
+#appmain{
+    background-color: $gray;
+    font-family: "Open Sans", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.table{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .listing{
+        width: 100%;
+    }
+}
+//responsive
+@media only screen and (max-width:768px){
+    .listing{
+        width: auto;
+    }
+   
+}
+@media only screen and (max-width:580px){
+    .edge{
+        margin-right: 20px;
+    }
+}

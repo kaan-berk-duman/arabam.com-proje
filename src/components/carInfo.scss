@@ -1,0 +1,44 @@
+$red: #e40030;
+$tableBorder: #ebebeb;
+
+.carInfo{
+    width: 250px;
+    margin-right: 10px;
+    margin-left: 10px;
+    .property-item{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $tableBorder;
+        padding: 8px 0px;
+        height: 32px;
+        .property-key{
+            font-size: 12px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: var(--gray-800);
+        }
+        .property-value{
+            @extend.property-key;
+            text-align: right;
+        }
+    }
+}
+.property-item.price .property-value {
+    color: $red;
+    font-size: 18px;
+  }
+@media only screen and (max-width:1220px){
+    .carInfo{
+        margin: auto;
+    }
+}
+@media only screen and (max-width:1024px){
+    .carInfo{
+        width: 100%;
+    }
+}

@@ -1,0 +1,102 @@
+//renkler
+$red: #e40030;
+$yellow: #ffdb4d;
+$black: #1a1a1a;
+$white: #fff;
+$tabledark: #0a1e33;
+$tableLink: #fff0f5;
+$tableBorder: #ebebeb;
+.listTable{
+    border: 1px solid $tableBorder;
+    border-radius: 0 4px 4px 4px;
+    border-collapse: collapse;
+    width: 100%;
+    .listTableHead{
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+        background-color: $white;
+        height: 30px;
+        tr{
+            th{
+                border:none;
+            }
+        }
+    }
+    .listTableBody{
+        background-color: $white;
+        font-size: 12px;
+        tr{
+            td{
+                border-bottom: 1px solid $tableBorder;
+                border-top: 1px solid $tableBorder;
+                border-left: 1px solid $white;
+                border-right: 1px solid $white;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            td:first-child{
+                border-left: 1px solid $tableBorder;
+                border-top: 1px solid $white;
+            }
+            td:last-child{
+                border-right: 1px solid $tableBorder;
+            }
+        }
+        .advert{
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 100%;
+        }
+        .data:hover{
+            background-color: $tableLink;
+        }
+        .carPicture{
+            width: 120px;
+            height: 90px;
+        }
+        .center{
+            text-align: center;
+        }
+        .price{
+            @extend.center;
+            color:$red;
+            font-weight: 700;
+        }
+        .advertisement{
+            @extend.advert;
+            background-color: $yellow;
+            .advertisementOpen{
+                text-align: center;
+                width: 100%;
+                display: block;
+                line-height: 30px;
+                font-size: 11px;
+                font-weight: 600;
+                color:$black;
+                text-decoration: none;
+                span{
+                    text-decoration: underline;
+                }
+            }
+            .advertisementOpen:hover{
+                text-decoration: underline;
+            }    
+        }
+    }
+}   
+
+//tablo renk belirleme
+.data:nth-child(2n+1) {
+    background-color: #f3f3f3;
+  }
+
+@media only screen and (max-width:768px){
+    .hidden{
+        display: none;
+    }
+    .listTable{
+        width: auto;
+    }
+   
+}

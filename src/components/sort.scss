@@ -1,0 +1,23 @@
+$white: #fff;
+$tableBorder: #ebebeb;
+
+.sort{
+    margin-top: 7px;
+    float: right;
+    select{
+        height: 25px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        border: 1px solid $tableBorder;
+        background-color: $white;
+        color: darkgrey;
+        border-radius: 4px;
+    }
+}
+
+@media only screen and (max-width:580px){
+    .sort{
+        margin-right: 20px;
+    }
+}

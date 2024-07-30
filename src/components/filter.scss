@@ -1,0 +1,97 @@
+$red: #e40030;
+$yellow: #ffdb4d;
+$gray: #f7f7f7;
+$white: #fff;
+.filter{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    button{
+        border: 1px solid $yellow;
+        border-radius: 4px;
+        background-color: $red;
+        text-align: center;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 700;
+        color: $white;
+        height: 32px;
+        padding: 1px 10px 5px;
+    }
+    
+}
+.panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    overflow-x: hidden;
+    background-color: #333;
+    color: $white;
+    padding: 0;
+    transition: width 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+.panel.open {
+    width: 300px;
+    padding: 20px;
+}
+.closeButton {
+    position: absolute;
+    right: 20px;
+    background-color: $red;
+    color: $white;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+}
+#yearFilterForm{
+    margin-top: 50px;
+    button{
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .input-wrapper {
+        position: relative;
+        font-size: 16px;
+        input {
+            all: unset;
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 2px solid $gray;
+            margin-bottom: 20px;
+            color: $white;
+        }
+        label {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            color:  $gray;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+    }
+    .input-wrapper input:is(:focus, :valid) ~ label {
+        bottom: 50%;
+        font-size: 16px;
+        color: $red;
+    }
+    .input-wrapper > .underline {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $red;
+        scale: 0 1;
+        transition: 0.3s;
+        margin-bottom: 20px;
+    }
+    .input-wrapper input:focus ~ .underline {
+        scale: 1 1;
+    }
+}
